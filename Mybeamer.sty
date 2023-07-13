@@ -1,0 +1,30 @@
+%%%----------------パッケージ呼び出し-----------------
+\usepackage{amsmath,amssymb} % 数式記号の拡張機能
+\usepackage{bm} %ベクトルをイタリック体のまま太字にする
+
+\usepackage{mathtools} %式番号を使うヤツだけつける
+\mathtoolsset{showonlyrefs=true} %mathtoolsとセットで
+
+\usepackage{enumerate} % 箇条書きのためのパッケージ
+\usepackage{fancybox} % 文字を四角で囲む
+\usepackage{ascmac} %文章を枠で囲む。shadeboxなど
+\usepackage{color} %文字に色を付ける
+
+\usepackage{url} %参考文献にURLを使う場合
+\usepackage{graphicx} %画像や絵を挿入
+
+%%%-------------新しいコマンド(関数)の定義-------------
+\newcommand{\Lvec}[1]{{\overrightarrow{\mathrm{#1}}}} %始点と終点を示したベクトルの表記
+\newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}} %式番号を丸で囲む
+\newcommand{\Image}[4]{
+\centering
+\includegraphics[#1]{#2}
+\caption{#3}
+\label{#4}
+} %図や写真の挿入。\caption[*]は目次における図の名前。\sectionも同様。
+
+\renewcommand{\Re}{\operatorname{Re}} %実部
+\renewcommand{\Im}{\operatorname{Im}} %虚部
+
+\DeclareMathOperator*{\argmin}{arg~min} % argmin
+\DeclareMathOperator*{\argmax}{arg~max} % argmax

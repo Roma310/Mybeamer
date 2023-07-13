@@ -1,0 +1,52 @@
+\documentclass[unicode,12pt]{beamer}
+\usepackage[whole,autotilde]{bxcjkjatype}% pdfLaTeXで日本語したい
+%%%--------LuaLaTeXで日本語なら以下------------
+%\usepackage{luatexja}% 日本語したい
+%\usepackage[ipaex]{luatexja-preset}% IPAexフォントしたい
+%\renewcommand{\kanjifamilydefault}{\gtdefault}% 既定をゴシック体に
+%%%--------LuaLaTeXで日本語なら以上------------
+
+%%%--------beamerのテーマ---------------------
+\usetheme{Antibes}
+\usecolortheme[RGB={0, 150, 255}]{structure}
+\usefonttheme{professionalfonts}
+
+%%%--------OpenV Labのパッケージを読み込み------
+\usepackage{Mybeamer}
+
+%%% ----タイトル----
+%% ----タイトルページに背景画像----
+\usebackgroundtemplate{}
+%% ----タイトル詳細----
+\title{Title}
+\author{Author Name}
+\date{\today}
+\institute{Institute}
+\titlegraphic{}
+
+\begin{document}
+%%% ----1ページ目----
+%% ----タイトル----
+\maketitle
+%%% ----1ページ目終わり----
+
+%% ----背景を元に戻す----
+\usebackgroundtemplate{}
+%% ----各ページ右下にロゴ----
+\logo{}
+
+%%% ----2ページ目(目次)----
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+%%% ----2ページ目終わり----
+
+%%% ----これ以降，本題----
+\section{\# 1}
+\input{main_topic/first}
+
+%%% ----謝辞(最後のページ)----
+\section*{Acknowledgement}
+\input{acknowledgement}
+
+\end{document}
